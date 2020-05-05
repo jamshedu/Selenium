@@ -26,12 +26,13 @@ public class RadioDemo {
 		
 		maleRadioB.click();
 		
-		List<WebElement>listRadio=drive.findElements(By.xpath("//input[@name='exp']"));
+		List<WebElement>listRadio=drive.findElements(By.xpath("//input[@name='profession']"));
 		
 		int listZise=listRadio.size();
-		System.out.println(listZise);
+		System.out.println("Size of CheckBoxs: "+listZise);
 		
 		String valueToBeselected="Manual Tester";
+		//drive.findElement(By.xpath("//input[@id='sex-0']")).getAttribute("value");
 		for(WebElement proList:listRadio) {
 			
 			if( proList.isEnabled()) {
