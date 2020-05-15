@@ -46,15 +46,25 @@ public class CreatFaceBook {
 	    	}
 	    driver.get(prop.getProperty("url"));
 	    
-	    driver.findElement(By.id("//*[@id='u_0_13']")).click();
-	    driver.findElement(By.id("//*[@id='u_0_m']")).sendKeys(prop.getProperty("name"));;
-		driver.findElement(By.id("//*[@id='u_0_o']")).sendKeys(prop.getProperty("lastname"));;
-		driver.findElement(By.id("//*[@id='u_0_r']")).sendKeys(prop.getProperty("email"));
-		driver.findElement(By.id("//input[@id='u_0_w']")).sendKeys(prop.getProperty("password"));
-		driver.findElement(By.id("//*[@id='month']")).sendKeys(prop.getProperty("month"));
-		driver.findElement(By.id("//*[@id='day']")).sendKeys(prop.getProperty("day"));
+	   
+//	    driver.findElement(By.xpath("//*[@id='u_0_m']")).sendKeys(prop.getProperty("name"));;
+//		driver.findElement(By.xpath("//*[@id='u_0_o']")).sendKeys(prop.getProperty("lastname"));;
+//		driver.findElement(By.xpath("//*[@id='u_0_r']")).sendKeys(prop.getProperty("email"));
+//		driver.findElement(By.xpath("//input[@id='u_0_w']")).sendKeys(prop.getProperty("password"));
+//		driver.findElement(By.xpath("//*[@id='month']")).sendKeys(prop.getProperty("month"));
+//		driver.findElement(By.xpath("//*[@id='day']")).sendKeys(prop.getProperty("day"));
+	    
+	    driver.findElement(By.id("u_0_m")).sendKeys(prop.getProperty("name"));;
+		driver.findElement(By.id("u_0_o")).sendKeys(prop.getProperty("lastname"));;
+		driver.findElement(By.id("u_0_r")).sendKeys(prop.getProperty("email"));
+		driver.findElement(By.id("u_0_w")).sendKeys(prop.getProperty("password"));
+//		driver.findElement(By.id("month")).sendKeys(prop.getProperty("month"));
+//		driver.findElement(By.id("day")).sendKeys(prop.getProperty("day"));
+		
+		driver.findElement(By.id("u_0_13")).click();
 		
 		
+		//driver.quit();
 		
 		
 		
